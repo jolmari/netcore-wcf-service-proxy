@@ -89,6 +89,12 @@ namespace WcfProxy.CountryServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/SaveCountry", ReplyAction="http://tempuri.org/ICountryService/SaveCountryResponse")]
         System.Threading.Tasks.Task SaveCountryAsync(WcfProxy.CountryServiceReference.Country country);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/Clear", ReplyAction="http://tempuri.org/ICountryService/ClearResponse")]
+        void Clear();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/Clear", ReplyAction="http://tempuri.org/ICountryService/ClearResponse")]
+        System.Threading.Tasks.Task ClearAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,6 +138,14 @@ namespace WcfProxy.CountryServiceReference {
         
         public System.Threading.Tasks.Task SaveCountryAsync(WcfProxy.CountryServiceReference.Country country) {
             return base.Channel.SaveCountryAsync(country);
+        }
+        
+        public void Clear() {
+            base.Channel.Clear();
+        }
+        
+        public System.Threading.Tasks.Task ClearAsync() {
+            return base.Channel.ClearAsync();
         }
     }
 }
