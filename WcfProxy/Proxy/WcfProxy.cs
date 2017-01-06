@@ -1,22 +1,29 @@
 ﻿using System;
 using System.ServiceModel;
+using Etera.Yel.Verkkopalvelu.Service.Proxy;
 
-namespace Etera.Yel.Verkkopalvelu.Service.Proxy
+namespace WcfProxy.Proxy
 {
     public class WcfProxy<T> : IWcfProxy<T> where T : class
     {
-        private readonly ChannelFactory<T> channelFactory;
-
+        private readonly string endpointUrl;
+        
         public WcfProxy(string endpointUrl)
+        {
+            this.endpointUrl = endpointUrl;
+        }
+
+        private T CreateChannel()
         {
             var binding = new BasicHttpsBinding();
             var endpoint = new EndpointAddress(endpointUrl);
-            channelFactory = new ChannelFactory<T>(binding, endpoint);
+            var factory = new ChannelFactory<T>(binding, endpoint);
+            return factory.CreateChannel();
         }
 
         public void Execute(Action<T> action)
         {
-            var clientProxy = channelFactory.CreateChannel();
+            var clientProxy = CreateChannel();
 
             try
             {
@@ -31,7 +38,7 @@ namespace Etera.Yel.Verkkopalvelu.Service.Proxy
 
         public TResult Execute<TResult>(Func<T, TResult> function)
         {
-            var clientProxy = channelFactory.CreateChannel();
+            var clientProxy = CreateChannel();
 
             try
             {
