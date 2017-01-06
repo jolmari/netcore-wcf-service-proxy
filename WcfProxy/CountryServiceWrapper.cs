@@ -17,9 +17,10 @@ namespace WcfProxy
             return clientProxy.Execute(client => client.GetCountries());
         }
 
-        public Task<Country[]> GetCountriesAsync()
+        public async Task<Country[]> GetCountriesAsync()
         {
-            throw new System.NotImplementedException();
+            var clientProxy = new Proxy.WcfProxy<ICountryService>(endpointUrl);
+            return await clientProxy.Execute(client => client.GetCountriesAsync());
         }
 
         public void SaveCountry(Country country)
@@ -28,9 +29,10 @@ namespace WcfProxy
             clientProxy.Execute(client => client.SaveCountry(country));
         }
 
-        public Task SaveCountryAsync(Country country)
+        public async Task SaveCountryAsync(Country country)
         {
-            throw new System.NotImplementedException();
+            var clientProxy = new Proxy.WcfProxy<ICountryService>(endpointUrl);
+            await clientProxy.Execute(client => client.SaveCountryAsync(country));
         }
 
         public void Clear()
@@ -39,9 +41,10 @@ namespace WcfProxy
             clientProxy.Execute(client => client.Clear());
         }
 
-        public Task ClearAsync()
+        public async Task ClearAsync()
         {
-            throw new System.NotImplementedException();
+            var clientProxy = new Proxy.WcfProxy<ICountryService>(endpointUrl);
+            await clientProxy.Execute(client => client.ClearAsync());
         }
     }
 }
