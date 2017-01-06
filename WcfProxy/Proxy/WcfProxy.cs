@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ServiceModel;
-using Etera.Yel.Verkkopalvelu.Service.Proxy;
 
 namespace WcfProxy.Proxy
 {
@@ -15,7 +14,7 @@ namespace WcfProxy.Proxy
 
         private T CreateChannel()
         {
-            var binding = new BasicHttpsBinding();
+            var binding = new BasicHttpBinding();
             var endpoint = new EndpointAddress(endpointUrl);
             var factory = new ChannelFactory<T>(binding, endpoint);
             return factory.CreateChannel();

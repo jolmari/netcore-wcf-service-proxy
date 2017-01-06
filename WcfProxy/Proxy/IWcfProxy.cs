@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Etera.Yel.Verkkopalvelu.Service.Proxy
+namespace WcfProxy.Proxy
 {
     public interface IWcfProxy<out T>
     {
