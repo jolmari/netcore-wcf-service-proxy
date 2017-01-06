@@ -7,11 +7,12 @@ namespace NetCoreSample
 {
     public static class Program
     {
+        private const string EndpointUrl = "http://localhost:59546/ICountryService.svc";
         private static CountryServiceWrapper proxy;
 
         public static void Main(string[] args)
         {
-            proxy = new CountryServiceWrapper();
+            proxy = new CountryServiceWrapper(EndpointUrl);
             OutputCountries();
             proxy.SaveCountry(new Country { Code = "RUS", Name = "Russia" });
             OutputCountries();

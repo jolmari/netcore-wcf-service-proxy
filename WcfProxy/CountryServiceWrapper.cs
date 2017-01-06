@@ -5,10 +5,11 @@ namespace WcfProxy
 {
     public class CountryServiceWrapper : ICountryService
     {
-        private string endpointUrl = "http://localhost:59546/ICountryService.svc";
+        private readonly string endpointUrl;
 
-        public CountryServiceWrapper()
+        public CountryServiceWrapper(string endpointUrl)
         {
+            this.endpointUrl = endpointUrl;
         }
         
         public Country[] GetCountries()
