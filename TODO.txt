@@ -1,0 +1,6 @@
+- Improve the UI to a simple ASP.NET Core App
+- Nuget-packing post-build event & reference to .NET Core app
+- Inversion of Control
+- Multiple Wcf Endpoints
+- Config files & IOptions
+- Secret Manager (dev) & Environment Variables (prod)
