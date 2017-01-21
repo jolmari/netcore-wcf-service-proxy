@@ -59,21 +59,17 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WcfService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Bin\CountryWcfService.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ICountryService.svc" />
+    <Content Include="CountryService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\CountryDto.cs" />
-    <Compile Include="ICountryService.svc.cs">
-      <DependentUpon>ICountryService.svc</DependentUpon>
+    <Compile Include="CountryService.svc.cs">
+      <DependentUpon>CountryService.svc</DependentUpon>
     </Compile>
-    <Compile Include="CountryService.cs" />
+    <Compile Include="ICountryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -5,7 +5,7 @@ using PersonWcfService.DTO;
 namespace PersonWcfService
 {
     [ServiceContract]
-    public interface IPersonWcfService
+    public interface IPersonService
     {
         [OperationContract]
         List<PersonDto> GetPersons();

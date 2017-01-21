@@ -8,6 +8,7 @@ namespace CountryWcfService
         private static readonly List<CountryDto> Store = new List<CountryDto>
         {
             new CountryDto { Code = "FIN", Name = "Finland" },
+            new CountryDto { Code = "USA", Name = "United States of America" },
             new CountryDto { Code = "SWE", Name = "Sweden" },
             new CountryDto { Code = "DNK", Name = "Denmark" },
             new CountryDto { Code = "DEU", Name = "Germany" },
