@@ -34,10 +34,3 @@ Simple examples of WCF services that are connected to by the proxy-class via mes
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
 * .NET Core -> .NET 4.6 dependency resolving through Nuget packages
-
-# Improvements still to be done
-1. Improve the UI to a simple ASP.NET Core App
-2. Inversion of Control
-3. Multiple Wcf Endpoints
-4. Config files & IOptions
-5. Secret Manager (dev) & Environment Variables (prod)
