@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd4a3a56-c8e3-45d3-876f-2017bb48d6de" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4fe7e3d9-79df-4b69-b089-5f1be7bd18ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -7,7 +7,7 @@
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
     <GenerateInternalTypes>false</GenerateInternalTypes>
-    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings />
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
@@ -19,13 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:59546/ICountryService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:59546/ICountryService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CountryService.wsdl" MetadataType="Wsdl" ID="be26a4d6-5ce5-4a32-a870-266c53db2725" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?wsdl" />
-    <MetadataFile FileName="ICountryService.xsd" MetadataType="Schema" ID="bd7c34f3-8008-484b-9241-02215ad6c1b7" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ICountryService1.xsd" MetadataType="Schema" ID="68937276-4b1c-46fb-af9e-d12dae920250" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ICountryService2.xsd" MetadataType="Schema" ID="fa03d170-8f7a-4783-bd13-96cbdf082198" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ICountryService.xsd" MetadataType="Schema" ID="8feefa5e-2c2b-4761-8162-d5114d7c2952" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CountryService.wsdl" MetadataType="Wsdl" ID="f231cba1-4cb5-49ec-8841-f89d814bc562" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?wsdl" />
+    <MetadataFile FileName="ICountryService1.xsd" MetadataType="Schema" ID="c9e7bcf1-f337-4ab7-a044-ca0fb38997f2" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ICountryService.disco" MetadataType="Disco" ID="062801da-aec7-4d8a-9bcd-9011528fe31f" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?disco" />
+    <MetadataFile FileName="ICountryService2.xsd" MetadataType="Schema" ID="879c35f5-de60-4fab-8be5-359e6b8275ea" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

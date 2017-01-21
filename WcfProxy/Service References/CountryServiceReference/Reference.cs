@@ -15,9 +15,9 @@ namespace WcfProxy.CountryServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CountryDto", Namespace="http://schemas.datacontract.org/2004/07/CountryWcfService.DTO")]
     [System.SerializableAttribute()]
-    public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CountryDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -79,22 +79,90 @@ namespace WcfProxy.CountryServiceReference {
     public interface ICountryService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/GetCountries", ReplyAction="http://tempuri.org/ICountryService/GetCountriesResponse")]
-        WcfProxy.CountryServiceReference.Country[] GetCountries();
+        WcfProxy.CountryServiceReference.GetCountriesResponse GetCountries(WcfProxy.CountryServiceReference.GetCountriesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/GetCountries", ReplyAction="http://tempuri.org/ICountryService/GetCountriesResponse")]
-        System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.Country[]> GetCountriesAsync();
+        System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.GetCountriesResponse> GetCountriesAsync(WcfProxy.CountryServiceReference.GetCountriesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/SaveCountry", ReplyAction="http://tempuri.org/ICountryService/SaveCountryResponse")]
-        void SaveCountry(WcfProxy.CountryServiceReference.Country country);
+        WcfProxy.CountryServiceReference.SaveCountryResponse SaveCountry(WcfProxy.CountryServiceReference.SaveCountryRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/SaveCountry", ReplyAction="http://tempuri.org/ICountryService/SaveCountryResponse")]
-        System.Threading.Tasks.Task SaveCountryAsync(WcfProxy.CountryServiceReference.Country country);
+        System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.SaveCountryResponse> SaveCountryAsync(WcfProxy.CountryServiceReference.SaveCountryRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/Clear", ReplyAction="http://tempuri.org/ICountryService/ClearResponse")]
-        void Clear();
+        WcfProxy.CountryServiceReference.ClearResponse Clear(WcfProxy.CountryServiceReference.ClearRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICountryService/Clear", ReplyAction="http://tempuri.org/ICountryService/ClearResponse")]
-        System.Threading.Tasks.Task ClearAsync();
+        System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.ClearResponse> ClearAsync(WcfProxy.CountryServiceReference.ClearRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCountries", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCountriesRequest {
+        
+        public GetCountriesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCountriesResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetCountriesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public WcfProxy.CountryServiceReference.CountryDto[] GetCountriesResult;
+        
+        public GetCountriesResponse() {
+        }
+        
+        public GetCountriesResponse(WcfProxy.CountryServiceReference.CountryDto[] GetCountriesResult) {
+            this.GetCountriesResult = GetCountriesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveCountry", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class SaveCountryRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public WcfProxy.CountryServiceReference.CountryDto country;
+        
+        public SaveCountryRequest() {
+        }
+        
+        public SaveCountryRequest(WcfProxy.CountryServiceReference.CountryDto country) {
+            this.country = country;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveCountryResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class SaveCountryResponse {
+        
+        public SaveCountryResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Clear", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ClearRequest {
+        
+        public ClearRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ClearResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ClearResponse {
+        
+        public ClearResponse() {
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -124,28 +192,28 @@ namespace WcfProxy.CountryServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public WcfProxy.CountryServiceReference.Country[] GetCountries() {
-            return base.Channel.GetCountries();
+        public WcfProxy.CountryServiceReference.GetCountriesResponse GetCountries(WcfProxy.CountryServiceReference.GetCountriesRequest request) {
+            return base.Channel.GetCountries(request);
         }
         
-        public System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.Country[]> GetCountriesAsync() {
-            return base.Channel.GetCountriesAsync();
+        public System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.GetCountriesResponse> GetCountriesAsync(WcfProxy.CountryServiceReference.GetCountriesRequest request) {
+            return base.Channel.GetCountriesAsync(request);
         }
         
-        public void SaveCountry(WcfProxy.CountryServiceReference.Country country) {
-            base.Channel.SaveCountry(country);
+        public WcfProxy.CountryServiceReference.SaveCountryResponse SaveCountry(WcfProxy.CountryServiceReference.SaveCountryRequest request) {
+            return base.Channel.SaveCountry(request);
         }
         
-        public System.Threading.Tasks.Task SaveCountryAsync(WcfProxy.CountryServiceReference.Country country) {
-            return base.Channel.SaveCountryAsync(country);
+        public System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.SaveCountryResponse> SaveCountryAsync(WcfProxy.CountryServiceReference.SaveCountryRequest request) {
+            return base.Channel.SaveCountryAsync(request);
         }
         
-        public void Clear() {
-            base.Channel.Clear();
+        public WcfProxy.CountryServiceReference.ClearResponse Clear(WcfProxy.CountryServiceReference.ClearRequest request) {
+            return base.Channel.Clear(request);
         }
         
-        public System.Threading.Tasks.Task ClearAsync() {
-            return base.Channel.ClearAsync();
+        public System.Threading.Tasks.Task<WcfProxy.CountryServiceReference.ClearResponse> ClearAsync(WcfProxy.CountryServiceReference.ClearRequest request) {
+            return base.Channel.ClearAsync(request);
         }
     }
 }
