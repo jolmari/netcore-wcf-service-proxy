@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Linq;
 using WcfProxy;
+using WcfProxy.Interfaces;
+using WcfProxy.Models;
 
 namespace NetCoreSample
 {
     public static class Program
     {
         private const string EndpointUrl = "http://localhost:59546/ICountryService.svc";
-        private static CountryServiceWrapper proxy;
+        private static ICountryServiceWrapper proxy;
 
         public static void Main(string[] args)
         {
-            //proxy = new CountryServiceWrapper(EndpointUrl);
-            //OutputCountries();
-            //proxy.SaveCountry(new Country { Code = "RUS", Name = "Russia" });
-            //OutputCountries();
-            //Console.ReadKey();
+            proxy = new CountryServiceWrapper(EndpointUrl);
+            OutputCountries();
+            proxy.SaveCountry(new Country { Code = "RUS", Name = "Russia" });
+            OutputCountries();
+            Console.ReadKey();
         }
 
         private static void OutputCountries()
         {
-            //Console.WriteLine("List of countries");
-            //var countries = proxy.GetCountries();
-            //countries.ToList().ForEach(country => Console.WriteLine($"{country.Code}: {country.Name}"));
+            Console.WriteLine("List of countries");
+            var countries = proxy.GetCountries();
+            countries.ToList().ForEach(country => Console.WriteLine($"{country.Code}: {country.Name}"));
         }
     }
 }

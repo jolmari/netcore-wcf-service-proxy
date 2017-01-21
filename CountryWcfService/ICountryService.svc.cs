@@ -10,7 +10,11 @@ namespace CountryWcfService
             new CountryDto { Code = "FIN", Name = "Finland" },
             new CountryDto { Code = "SWE", Name = "Sweden" },
             new CountryDto { Code = "DNK", Name = "Denmark" },
-            new CountryDto { Code = "DEU", Name = "Germany" }
+            new CountryDto { Code = "DEU", Name = "Germany" },
+            new CountryDto { Code = "RUS", Name = "Russia" },
+            new CountryDto { Code = "NOR", Name = "Norway" },
+            new CountryDto { Code = "UKR", Name = "Ukraine" },
+            new CountryDto { Code = "EST", Name = "Estonia" },
         };
         
         public List<CountryDto> GetCountries()

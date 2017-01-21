@@ -1,10 +1,10 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
   },
   "dependencies": {
-    "WcfProxy": "1.0.0.*"
+    "WcfProxy": "1.0.0.1020" 
   },
   "frameworks": {
     "net461": {
