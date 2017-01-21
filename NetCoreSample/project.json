@@ -4,15 +4,12 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-    "System.Runtime.Serialization.Xml": "4.3.0"
+    "WcfProxy": "1.0.0.*"
   },
   "frameworks": {
     "net461": {
       "dependencies": {
-        "WcfProxy": {
-          "target": "project"
-        }
       }
     }
-    }
+  }
 }

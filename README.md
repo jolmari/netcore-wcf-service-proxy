@@ -45,8 +45,7 @@ Contains a very naive and simple WCF-service implementation for getting and savi
 
 # Improvements still to be done
 1. Improve the UI to a simple ASP.NET Core App
-2. Nuget-packing post-build event & reference to .NET Core app
-3. Inversion of Control
-4. Multiple Wcf Endpoints
-5. Config files & IOptions
-6. Secret Manager (dev) & Environment Variables (prod)
+2. Inversion of Control
+3. Multiple Wcf Endpoints
+4. Config files & IOptions
+5. Secret Manager (dev) & Environment Variables (prod)
