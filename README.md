@@ -23,23 +23,17 @@ Failed to generate service reference.
 
 # This project includes:
 
-## Multiple WCF services
+* Multiple WCF services
 Simple examples of WCF services that are connected to by the proxy-class via message contracts.
 
-## WCF-proxy implementation
-### A class library project that includes a proxy class that creates the WCF-connections from IOptions configuration files (todo) 
-### Wrapper interfaces hiding the actual service implementation and wrapping the response objects to local model classes
-### Factory class for creating the wrappers with their respective endpoint-urls and credentials (todo)
-### Simple authentication implementation (todo)
+* WCF-proxy implementation
+   * A class library project that includes a proxy class that creates the WCF-connections from IOptions configuration files (todo) 
+   * Wrapper interfaces hiding the actual service implementation and wrapping the response objects to local model classes
+   * Factory class for creating the wrappers with their respective endpoint-urls and credentials (todo)
+   * Simple authentication implementation (todo)
 
-## ASP.NET Core client that calls is used to demonstrate the use cases
-
-## .NET Core -> .NET 4.6 dependency resolving through Nuget packages
-
-# Running the solution
-1. Open the solution in visual studio
-2. Run the WCF service project
-3. Run the NetCoreSample project
+* ASP.NET Core client that calls is used to demonstrate the use cases
+* .NET Core -> .NET 4.6 dependency resolving through Nuget packages
 
 # Improvements still to be done
 1. Improve the UI to a simple ASP.NET Core App
