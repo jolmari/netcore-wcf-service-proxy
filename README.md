@@ -3,6 +3,10 @@ This small project is my solution to a problem I came across when trying to acce
 from a new ASP.NET Core project and could not get the official WCF-extension to properly create
 the interfaces.
 
+Most of the examples found by simple googling came up with simple connector implementations. These did not
+showcase the actual problem and were lacking in situations where multiple connections are needed. The aim here
+is to create a generic, yet simple, way to handle such a situation.
+
 # Description
 The first step in trying to enable WCF-services is to use the official Visual Studio extension found here:
 
