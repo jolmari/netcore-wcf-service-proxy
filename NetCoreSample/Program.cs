@@ -8,23 +8,39 @@ namespace NetCoreSample
 {
     public static class Program
     {
-        private const string EndpointUrl = "http://localhost:59546/ICountryService.svc";
-        private static ICountryServiceWrapper proxy;
+        private const string CountryEndpointUrl = "http://localhost:59546/CountryService.svc";
+        private const string PersonEndpointUrl = "http://localhost:61820/PersonService.svc";
+        private static ICountryServiceWrapper countryProxy;
+        private static IPersonServiceWrapper personProxy;
 
         public static void Main(string[] args)
         {
-            proxy = new CountryServiceWrapper(EndpointUrl);
+            countryProxy = new CountryServiceWrapper(CountryEndpointUrl);
+            personProxy = new PersonServiceWrapper(PersonEndpointUrl);
+
             OutputCountries();
-            proxy.SaveCountry(new Country { Code = "RUS", Name = "Russia" });
+            OutputPersons();
+
+            countryProxy.SaveCountry(new Country { Code = "RUS", Name = "Russia" });
+            personProxy.SavePerson(new Person { CountryCode = "RUS", FirstName = "Vladimir", LastName = "Ulianov"});
+
             OutputCountries();
+            OutputPersons();
             Console.ReadKey();
         }
 
         private static void OutputCountries()
         {
             Console.WriteLine("List of countries");
-            var countries = proxy.GetCountries();
+            var countries = countryProxy.GetCountries();
             countries.ToList().ForEach(country => Console.WriteLine($"{country.Code}: {country.Name}"));
+        }
+
+        private static void OutputPersons()
+        {
+            Console.WriteLine("List of persons");
+            var persons = personProxy.GetPersons();
+            persons.ToList().ForEach(person => Console.WriteLine($"{person.CountryCode}: {person.FirstName} {person.LastName}"));
         }
     }
 }
