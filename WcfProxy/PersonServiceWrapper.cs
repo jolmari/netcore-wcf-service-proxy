@@ -10,17 +10,15 @@ namespace WcfProxy
 {
     public class PersonServiceWrapper : IPersonServiceWrapper
     {
-        private readonly string endpointUrl;
+        private readonly WcfProxy<IPersonService> clientProxy;
 
         public PersonServiceWrapper(string endpointUrl)
         {
-            this.endpointUrl = endpointUrl;
+            clientProxy = new WcfProxy<IPersonService>(endpointUrl);
         }
 
         public IEnumerable<Person> GetPersons()
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new GetPersonsRequest();
             var result = clientProxy.Execute(client => client.GetPersons(request));
             return result.GetPersonsResult.AsEnumerable().Select(MapPersonDtoToPerson);
@@ -28,8 +26,6 @@ namespace WcfProxy
 
         public async Task<IEnumerable<Person>> GetPersonsAsync()
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new GetPersonsRequest();
             var result = await clientProxy.Execute(client => client.GetPersonsAsync(request));
             return result.GetPersonsResult.AsEnumerable().Select(MapPersonDtoToPerson);
@@ -37,32 +33,24 @@ namespace WcfProxy
 
         public void SavePerson(Person person)
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new SavePersonRequest(MapPersonToPersonDto(person));
             clientProxy.Execute(client => client.SavePerson(request));
         }
 
         public async Task SavePersonAsync(Person person)
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new SavePersonRequest(MapPersonToPersonDto(person));
             await clientProxy.Execute(client => client.SavePersonAsync(request));
         }
 
         public void Clear()
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new ClearRequest();
             clientProxy.Execute(client => client.Clear(request));
         }
 
         public async Task ClearAsync()
         {
-            var clientProxy = new WcfProxy<IPersonService>(endpointUrl);
-
             var request = new ClearRequest();
             await clientProxy.Execute(client => client.ClearAsync(request));
         }

@@ -10,17 +10,15 @@ namespace WcfProxy
 {
     public class CountryServiceWrapper : ICountryServiceWrapper
     {
-        private readonly string endpointUrl;
+        private readonly WcfProxy<ICountryService> clientProxy;
 
         public CountryServiceWrapper(string endpointUrl)
         {
-            this.endpointUrl = endpointUrl;
+            clientProxy = new WcfProxy<ICountryService>(endpointUrl);
         }
 
         public IEnumerable<Country> GetCountries()
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new GetCountriesRequest();
             var result = clientProxy.Execute(client => client.GetCountries(request));
             return result.GetCountriesResult.AsEnumerable().Select(MapCountryDtoToCountry);
@@ -28,8 +26,6 @@ namespace WcfProxy
 
         public async Task<IEnumerable<Country>> GetCountriesAsync()
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new GetCountriesRequest();
             var result = await clientProxy.Execute(client => client.GetCountriesAsync(request));
             return result.GetCountriesResult.AsEnumerable().Select(MapCountryDtoToCountry);
@@ -37,32 +33,24 @@ namespace WcfProxy
 
         public void SaveCountry(Country country)
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new SaveCountryRequest(MapCountryToCountryDto(country));
             clientProxy.Execute(client => client.SaveCountry(request));
         }
 
         public async Task SaveCountryAsync(Country country)
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new SaveCountryRequest(MapCountryToCountryDto(country));
             await clientProxy.Execute(client => client.SaveCountryAsync(request));
         }
 
         public void Clear()
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new ClearRequest();
             clientProxy.Execute(client => client.Clear(request));
         }
 
         public async Task ClearAsync()
         {
-            var clientProxy = new WcfProxy<ICountryService>(endpointUrl);
-
             var request = new ClearRequest();
             await clientProxy.Execute(client => client.ClearAsync(request));
         }
