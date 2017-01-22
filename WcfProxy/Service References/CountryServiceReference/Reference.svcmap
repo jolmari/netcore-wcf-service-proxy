@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:59546/ICountryService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:59546/CountryService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ICountryService.xsd" MetadataType="Schema" ID="8feefa5e-2c2b-4761-8162-d5114d7c2952" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CountryService.wsdl" MetadataType="Wsdl" ID="f231cba1-4cb5-49ec-8841-f89d814bc562" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?wsdl" />
-    <MetadataFile FileName="ICountryService1.xsd" MetadataType="Schema" ID="c9e7bcf1-f337-4ab7-a044-ca0fb38997f2" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ICountryService.disco" MetadataType="Disco" ID="062801da-aec7-4d8a-9bcd-9011528fe31f" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?disco" />
-    <MetadataFile FileName="ICountryService2.xsd" MetadataType="Schema" ID="879c35f5-de60-4fab-8be5-359e6b8275ea" SourceId="1" SourceUrl="http://localhost:59546/ICountryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CountryService.disco" MetadataType="Disco" ID="8fc00774-8e95-462f-abd5-c3d8fa37adb6" SourceId="1" SourceUrl="http://localhost:59546/CountryService.svc?disco" />
+    <MetadataFile FileName="CountryService1.wsdl" MetadataType="Wsdl" ID="26ac9afe-60af-48c5-a553-88e8735c33d4" SourceId="1" SourceUrl="http://localhost:59546/CountryService.svc?wsdl" />
+    <MetadataFile FileName="CountryService.xsd" MetadataType="Schema" ID="605de82a-d708-45fe-afca-c0e4e9d46e46" SourceId="1" SourceUrl="http://localhost:59546/CountryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CountryService1.xsd" MetadataType="Schema" ID="97be295b-88a9-4344-83f2-eb028132aa94" SourceId="1" SourceUrl="http://localhost:59546/CountryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CountryService2.xsd" MetadataType="Schema" ID="6a4e9ccf-96a3-42d0-a55b-7abba7c831ba" SourceId="1" SourceUrl="http://localhost:59546/CountryService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

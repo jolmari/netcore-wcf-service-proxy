@@ -52,8 +52,10 @@
   <ItemGroup>
     <Compile Include="CountryServiceWrapper.cs" />
     <Compile Include="Interfaces\ICountryServiceWrapper.cs" />
+    <Compile Include="Interfaces\IPersonServiceWrapper.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="PersonServiceWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proxy\IWcfProxy.cs" />
     <Compile Include="Proxy\WcfProxy.cs" />
@@ -71,14 +73,14 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\CountryServiceReference\CountryService.wsdl" />
-    <None Include="Service References\CountryServiceReference\ICountryService.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CountryServiceReference\ICountryService1.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService1.wsdl" />
+    <None Include="Service References\CountryServiceReference\CountryService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CountryServiceReference\ICountryService2.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CountryServiceReference\WcfProxy.CountryServiceReference.ClearResponse.datasource">
@@ -118,9 +120,6 @@
     <WCFMetadataStorage Include="Service References\PersonServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CountryServiceReference\ICountryService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\CountryServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +145,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CountryServiceReference\CountryService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
