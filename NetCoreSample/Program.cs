@@ -15,8 +15,9 @@ namespace NetCoreSample
 
         public static void Main(string[] args)
         {
-            countryProxy = new CountryServiceWrapper(CountryEndpointUrl);
-            personProxy = new PersonServiceWrapper(PersonEndpointUrl);
+            var factory = new ServiceWrapperFactory();
+            countryProxy = factory.CreateCountryServiceWrapper(CountryEndpointUrl);
+            personProxy = factory.CreatePersonServiceWrapper(PersonEndpointUrl);
 
             OutputCountries();
             OutputPersons();
