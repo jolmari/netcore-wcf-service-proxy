@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\PersonServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -85,12 +90,32 @@
     <None Include="Service References\CountryServiceReference\WcfProxy.CountryServiceReference.SaveCountryResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\PersonServiceReference\PersonService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonServiceReference\PersonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonServiceReference\PersonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonServiceReference\PersonWcfService.wsdl" />
+    <None Include="Service References\PersonServiceReference\WcfProxy.PersonServiceReference.ClearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonServiceReference\WcfProxy.PersonServiceReference.GetPersonsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonServiceReference\WcfProxy.PersonServiceReference.SavePersonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CountryServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PersonServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CountryServiceReference\ICountryService.disco" />
@@ -103,6 +128,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CountryServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonServiceReference\PersonService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
