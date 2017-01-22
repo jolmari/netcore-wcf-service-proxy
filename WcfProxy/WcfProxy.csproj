@@ -53,6 +53,7 @@
     <Compile Include="CountryServiceWrapper.cs" />
     <Compile Include="Interfaces\ICountryServiceWrapper.cs" />
     <Compile Include="Interfaces\IPersonServiceWrapper.cs" />
+    <Compile Include="IServiceWrapperFactory.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="PersonServiceWrapper.cs" />
