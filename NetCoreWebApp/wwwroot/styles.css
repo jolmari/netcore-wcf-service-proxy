@@ -1,0 +1,40 @@
+﻿body {
+    background-color: #ecf0f1;
+    
+}
+
+.main-header {
+    margin: 0;
+    background-color: #34495e;
+    color: white;
+}
+
+.main-header h1 {
+    padding: 16px;
+    color: white;
+}
+
+.header-tile {
+    color:#34495e;
+    background-color: #16A085;   
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-top: 16px;
+}
+
+.header-tile h3 {
+    padding: 12px;
+    margin-bottom: 0;   
+}
+
+.list-group-item {
+    background-color: #34495E;
+    border-bottom-width: 2px;
+    border-color: #2C3E50;
+    color: #fff;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
