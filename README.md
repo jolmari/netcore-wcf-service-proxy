@@ -25,6 +25,16 @@ An error occurred in the tool.
 Failed to generate service reference. 
 ```
 
+# Running the solution
+```
+git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
+```
+
+1. Open the solution in Visual Studio 2015 ->
+2. Solution Explorer -> Solution -> Properties -> Startup Project
+  * Start CountryWcfService, NetCoreWebApp, PersonWcfService
+3. Run the solution
+
 # This project includes:
 
 * Multiple WCF services
@@ -33,7 +43,7 @@ Simple examples of WCF services that are connected to by the proxy-class via mes
 * WCF-proxy implementation
    * A class library project that includes a proxy class that creates the WCF-connections from IOptions configuration files (todo) 
    * Wrapper interfaces hiding the actual service implementation and wrapping the response objects to local model classes
-   * Factory class for creating the wrappers with their respective endpoint-urls and credentials (todo)
+   * Factory class for creating the wrappers with their respective endpoint-urls and credentials
    * Simple authentication implementation (todo)
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
