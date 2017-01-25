@@ -61,7 +61,9 @@ namespace WcfProxy
             {
                 CountryCode = person.CountryCode,
                 FirstName = person.FirstName,
-                LastName = person.LastName
+                LastName = person.LastName,
+                Phone = person.Phone,
+                Email = person.Email
             };
         }
 
@@ -71,7 +73,9 @@ namespace WcfProxy
             {
                 CountryCode = person.CountryCode,
                 FirstName = person.FirstName,
-                LastName = person.LastName
+                LastName = person.LastName,
+                Phone = person.Phone,
+                Email = person.Email
             };
         }
     }

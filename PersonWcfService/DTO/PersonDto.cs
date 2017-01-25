@@ -12,6 +12,12 @@ namespace PersonWcfService.DTO
         public string LastName { get; set; }
 
         [DataMember]
+        public string Phone { get; set; }
+
+        [DataMember]
+        public string Email { get; set; }
+
+        [DataMember]
         public string CountryCode { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿<div class="row">
+﻿@using WcfProxy.Models
+@model NetCoreWebApp.Models.ServicePayload
+
+<div class="row">
     <div class="main-header">
         <h1>Data output</h1>
     </div>
@@ -10,15 +13,13 @@
         </div>
 
         <ul class="list-group">
+            @foreach (var country in Model.Countries)
+            {
             <li class="list-group-item">
-                lol
+                <h4>@country.Name</h4>
+                <p>Country code: <i>@country.Code</i></p>
             </li>
-            <li class="list-group-item">
-                lol
-            </li>
-            <li class="list-group-item">
-                herp
-            </li>
+            }
         </ul>
 
     </div>
@@ -28,16 +29,15 @@
         </div>
         
         <ul class="list-group">
-            <li class="list-group-item">
-                <h4>derp</h4>
-                lol
-            </li>
-            <li class="list-group-item">
-                lol
-            </li>
-            <li class="list-group-item">
-                herp
-            </li>
+            @foreach (var person in Model.Persons)
+            {
+                <li class="list-group-item">
+                    <h4>@person.FirstName @person.LastName</h4>
+                    <p>Phone: <i>@person.Phone</i></p>
+                    <p>Email: <i>@person.Email</i></p>
+                    <p>Country code: <i>@person.CountryCode</i></p>
+                </li>
+            }
         </ul>
     </div>    
 </div>
