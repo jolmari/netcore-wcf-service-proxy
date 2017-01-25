@@ -33,7 +33,7 @@ git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
 1. Open the solution in Visual Studio 2015 ->
 2. Solution Explorer -> Solution -> Properties -> Startup Project
   * Start CountryWcfService, NetCoreWebApp, PersonWcfService
-3. Run the solution
+3. Run the solution (Ctrl+F5/F5)
 
 ![Alt text](/ui.png?raw=true "Example UI")
 
