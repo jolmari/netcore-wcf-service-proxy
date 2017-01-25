@@ -35,6 +35,8 @@ git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
   * Start CountryWcfService, NetCoreWebApp, PersonWcfService
 3. Run the solution
 
+![Alt text](/ui.png?raw=true "Example UI")
+
 # This project includes:
 
 * Multiple WCF services
