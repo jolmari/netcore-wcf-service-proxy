@@ -30,12 +30,17 @@ Failed to generate service reference.
 git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
 ```
 
-1. Open the solution in Visual Studio 2015 ->
-2. Solution Explorer -> Solution -> Properties -> Startup Project
-  * Start CountryWcfService, NetCoreWebApp, PersonWcfService
+1. Open the solution in Visual Studio 2015 with relevant ASP.NET Core tools installed, or VS2017
+https://www.microsoft.com/net/core#windowsvs2015
+2. Build solution
+3. Open the NetCoreWebApp project, open context menu on references and restore packages
 3. Run the solution (Ctrl+F5/F5)
 
 ![Alt text](/ui.png?raw=true "Example UI")
+
+##Troubleshooting
+1. The services don't start:
+  * Solution Explorer -> Solution -> Properties -> Startup Project. Start CountryWcfService, NetCoreWebApp, PersonWcfService.
 
 # This project includes:
 
