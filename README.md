@@ -45,7 +45,8 @@ https://www.microsoft.com/net/core#windowsvs2015
 # This project includes:
 
 * Multiple WCF services
-Simple examples of WCF services that are connected to by the proxy-class via message contracts.
+   * Simple examples of WCF services that are connected to by the proxy-class via message contracts.
+   * IoC using SimpleInjector and its Wcf Integration Extension
 
 * WCF-proxy implementation
    * A class library project that includes a proxy class that creates the WCF-connections from IOptions configuration files (todo) 
@@ -54,4 +55,3 @@ Simple examples of WCF services that are connected to by the proxy-class via mes
    * Simple authentication implementation (todo)
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
-* .NET Core -> .NET 4.6 dependency resolving through Nuget packages
