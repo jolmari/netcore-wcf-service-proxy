@@ -67,14 +67,14 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\CountryServiceReference\CountryService.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService.wsdl" />
+    <None Include="Service References\CountryServiceReference\CountryService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CountryServiceReference\CountryService1.wsdl" />
-    <None Include="Service References\CountryServiceReference\CountryService1.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CountryServiceReference\CountryService2.xsd">
+    <None Include="Service References\CountryServiceReference\CountryService32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CountryServiceReference\WcfProxy.CountryServiceReference.ClearResponse.datasource">
@@ -86,16 +86,16 @@
     <None Include="Service References\CountryServiceReference\WcfProxy.CountryServiceReference.SaveCountryResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\PersonServiceReference\PersonService.xsd">
+    <None Include="Service References\PersonServiceReference\PersonService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\PersonServiceReference\PersonService1.xsd">
+    <None Include="Service References\PersonServiceReference\PersonService31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\PersonServiceReference\PersonService2.xsd">
+    <None Include="Service References\PersonServiceReference\PersonService32.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\PersonServiceReference\PersonWcfService.wsdl" />
+    <None Include="Service References\PersonServiceReference\PersonWcfService1.wsdl" />
     <None Include="Service References\PersonServiceReference\WcfProxy.PersonServiceReference.ClearResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -126,9 +126,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\PersonServiceReference\PersonService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\PersonServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +138,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CountryServiceReference\CountryService.disco" />
+    <None Include="Service References\CountryServiceReference\CountryService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonServiceReference\PersonService1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -15,7 +15,7 @@ namespace WcfProxy.CountryServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CountryDto", Namespace="http://schemas.datacontract.org/2004/07/CountryWcfService.DTO")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CountryDto", Namespace="http://schemas.datacontract.org/2004/07/WcfServices.DTO")]
     [System.SerializableAttribute()]
     public partial class CountryDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         

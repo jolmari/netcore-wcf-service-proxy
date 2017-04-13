@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace CountryWcfService.DTO
+namespace WcfServices.DTO
 {
     [DataContract]
     public class CountryDto

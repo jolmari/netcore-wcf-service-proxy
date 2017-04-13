@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ULXVuP3qKAfO9rFJpPj0FBH2Ko4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="zJOw5Zx7M6kBdqHCiOglnDIPmWs=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICountryService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ICountryService" contract="CountryServiceReference.ICountryService" bindingType="basicHttpBinding" address="http://localhost:59546/CountryService.svc" bindingConfiguration="BasicHttpBinding_ICountryService">
+    <endpoint name="BasicHttpBinding_ICountryService" contract="CountryServiceReference.ICountryService" bindingType="basicHttpBinding" address="http://localhost:8080/CountryService.svc" bindingConfiguration="BasicHttpBinding_ICountryService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:59546/CountryService.svc</serializedValue>
+          <serializedValue>http://localhost:8080/CountryService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

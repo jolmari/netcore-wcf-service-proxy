@@ -1,6 +1,6 @@
 ﻿<%@ ServiceHost 
     Language="C#" 
     Debug="true" 
-    Service="WcfServices.CountryService" 
-    CodeBehind="CountryService.svc.cs" 
+    Service="WcfServices.PersonWcfService" 
+    CodeBehind="PersonService.svc.cs" 
     Factory="WcfServices.WcfServiceFactory"%>

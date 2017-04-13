@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel;
-using CountryWcfService.DTO;
+using WcfServices.DTO;
 
-namespace CountryWcfService
+namespace WcfServices.Interfaces
 {
     [ServiceContract]
     public interface ICountryService
     {
         [OperationContract]
-        List<CountryDto> GetCountries();
+        IEnumerable<CountryDto> GetCountries();
 
         [OperationContract]
         void SaveCountry(CountryDto country);

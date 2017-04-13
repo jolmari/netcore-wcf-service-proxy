@@ -1,36 +1,31 @@
 ﻿using System.Collections.Generic;
-using CountryWcfService.DTO;
+using WcfServices.DTO;
+using WcfServices.Interfaces;
 
-namespace CountryWcfService
+namespace WcfServices
 {
     public class CountryService : ICountryService
     {
-        private static readonly List<CountryDto> Store = new List<CountryDto>
+        private readonly ICountryRepository countryRepository;
+
+        public CountryService(ICountryRepository countryRepository)
         {
-            new CountryDto { Code = "FIN", Name = "Finland" },
-            new CountryDto { Code = "USA", Name = "United States of America" },
-            new CountryDto { Code = "SWE", Name = "Sweden" },
-            new CountryDto { Code = "DNK", Name = "Denmark" },
-            new CountryDto { Code = "DEU", Name = "Germany" },
-            new CountryDto { Code = "RUS", Name = "Russia" },
-            new CountryDto { Code = "NOR", Name = "Norway" },
-            new CountryDto { Code = "UKR", Name = "Ukraine" },
-            new CountryDto { Code = "EST", Name = "Estonia" },
-        };
+            this.countryRepository = countryRepository;
+        }
         
-        public List<CountryDto> GetCountries()
+        public IEnumerable<CountryDto> GetCountries()
         {
-            return Store;
+            return countryRepository.GetCountries();
         }
 
         public void SaveCountry(CountryDto country)
         {
-            Store.Add(country);
+            countryRepository.AddCountry(country);
         }
 
         public void Clear()
         {
-            Store.Clear();
+            countryRepository.Clear();
         }
     }
 }

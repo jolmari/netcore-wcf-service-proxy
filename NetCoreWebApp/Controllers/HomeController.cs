@@ -7,8 +7,8 @@ namespace NetCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private const string CountryEndpointUrl = "http://localhost:59546/CountryService.svc";
-        private const string PersonEndpointUrl = "http://localhost:61820/PersonService.svc";
+        private const string CountryEndpointUrl = "http://localhost:8080/CountryService.svc";
+        private const string PersonEndpointUrl = "http://localhost:8080/PersonService.svc";
         private static ICountryServiceWrapper countryProxy;
         private static IPersonServiceWrapper personProxy;
 
