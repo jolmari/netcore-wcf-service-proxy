@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfProxy", "WcfProxy\WcfPro
 		{16FA6B81-F184-4148-AFA1-C671B12E7394} = {16FA6B81-F184-4148-AFA1-C671B12E7394}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServices", "CountryWcfService\WcfServices.csproj", "{16FA6B81-F184-4148-AFA1-C671B12E7394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServices", "WcfServices\WcfServices.csproj", "{16FA6B81-F184-4148-AFA1-C671B12E7394}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreWebApp", "NetCoreWebApp\NetCoreWebApp.xproj", "{1662CCD6-7D7A-48D0-9D8D-A5FD29230BE6}"
 EndProject
