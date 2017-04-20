@@ -38,10 +38,6 @@ https://www.microsoft.com/net/core#windowsvs2015
 
 ![Alt text](/ui.png?raw=true "Example UI")
 
-##Troubleshooting
-1. The services don't start:
-  * Solution Explorer -> Solution -> Properties -> Startup Project. Start CountryWcfService, NetCoreWebApp, PersonWcfService.
-
 # This project includes:
 
 * Multiple WCF services
@@ -49,9 +45,11 @@ https://www.microsoft.com/net/core#windowsvs2015
    * IoC using SimpleInjector and its Wcf Integration Extension
 
 * WCF-proxy implementation
-   * A class library project that includes a proxy class that creates the WCF-connections from IOptions configuration files (todo) 
-   * Wrapper interfaces hiding the actual service implementation and wrapping the response objects to local model classes
-   * Factory class for creating the wrappers with their respective endpoint-urls and credentials
+   * A class library project that wraps the actual service contracts with proxy implementations
    * Simple authentication implementation (todo)
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
+
+##Troubleshooting
+1. The services don't start:
+  * Solution Explorer -> Solution -> Properties -> Startup Project. Start WcfServices & NetCoreWebApp.
