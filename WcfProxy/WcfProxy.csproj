@@ -62,11 +62,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ServiceWrapperFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
     <None Include="Service References\CountryServiceReference\CountryService.wsdl" />
     <None Include="Service References\CountryServiceReference\CountryService3.xsd">
       <SubType>Designer</SubType>

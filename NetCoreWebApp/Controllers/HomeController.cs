@@ -7,21 +7,21 @@ namespace NetCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private const string CountryEndpointUrl = "http://localhost:8080/CountryService.svc";
-        private const string PersonEndpointUrl = "http://localhost:8080/PersonService.svc";
-        private static ICountryServiceWrapper countryProxy;
-        private static IPersonServiceWrapper personProxy;
+        private readonly ICountryServiceWrapper countryServiceWrapper;
+        private readonly IPersonServiceWrapper personServiceWrapper;
+
+        public HomeController(ICountryServiceWrapper countryServiceWrapper, IPersonServiceWrapper personServiceWrapper)
+        {
+            this.countryServiceWrapper = countryServiceWrapper;
+            this.personServiceWrapper = personServiceWrapper;
+        }
 
         public IActionResult Index()
         {
-            var factory = new ServiceWrapperFactory();
-            countryProxy = factory.CreateCountryServiceWrapper(CountryEndpointUrl);
-            personProxy = factory.CreatePersonServiceWrapper(PersonEndpointUrl);
-
             var result = new ServicePayload
             {
-                Countries = countryProxy.GetCountries(),
-                Persons = personProxy.GetPersons()
+                Countries = countryServiceWrapper.GetCountries(),
+                Persons = personServiceWrapper.GetPersons()
             };
 
             return View(result);
