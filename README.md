@@ -7,7 +7,7 @@ Most of the examples found by simple googling came up with simple connector impl
 showcase the actual problem and were lacking in situations where multiple connections are needed. The aim here
 is to create a generic, yet simple, way to handle such a situation.
 
-# Description
+# Problem description
 The first step in trying to enable WCF-services is to use the official Visual Studio extension found here:
 
 https://blogs.msdn.microsoft.com/webdev/2016/06/26/wcf-connected-service-for-net-core-1-0-0-and-asp-net-core-1-0-0-is-now-available/
@@ -24,6 +24,14 @@ An error occurred in the tool.
 
 Failed to generate service reference. 
 ```
+# Solution
+1. Services are implemented in WcfServices
+2. WcfProxy project uses service references to create service contracts
+3. Wrapper classes in WcfProxy-project mask the actual services implementations and instad call them through the Proxy-class.
+4. Wrapper maps the Dtos to separate model classes
+5. ASP.NET Core injects the wrappers where they are used
+
+The Wcf services are completely isolated from the ASP.NET implementation and no references are needed to WcfServices-project.
 
 # Running the solution
 ```
