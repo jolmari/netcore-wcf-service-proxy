@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfProxy", "WcfProxy\WcfProxy.csproj", "{8BC013D9-DF68-4DAD-9D55-FE3514FC2624}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfProxy", "WcfProxy\WcfPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServices", "WcfServices\WcfServices.csproj", "{16FA6B81-F184-4148-AFA1-C671B12E7394}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreWebApp", "NetCoreWebApp\NetCoreWebApp.xproj", "{1662CCD6-7D7A-48D0-9D8D-A5FD29230BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApp", "NetCoreWebApp\NetCoreWebApp.csproj", "{1662CCD6-7D7A-48D0-9D8D-A5FD29230BE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
