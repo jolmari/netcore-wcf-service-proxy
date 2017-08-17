@@ -12,9 +12,8 @@ The first step in trying to enable WCF-services is to use the official Visual St
 
 https://blogs.msdn.microsoft.com/webdev/2016/06/26/wcf-connected-service-for-net-core-1-0-0-and-asp-net-core-1-0-0-is-now-available/
 
-The WCF Connected service for .NET Core 1.0 and ASP.NET Core 1.0 should fit to most use cases, but the preview
-version is not compatible with more complex (or incorrectly configured) services. You might face an error similar to the following, in such a
-case, the best option is to connect programmatically to the service via a proxy class library. This repository shows one way to
+The WCF Connected service for .NET Core 2.0 and ASP.NET Core 2.0 should fit to most use cases, but the preview
+version is not compatible with more complex (or incorrectly configured) services. You might face an error similar to the following, in such a case, the best option is to connect programmatically to the service via a proxy class library. This repository shows one way to
 implement this approach.
 
 ```
@@ -37,12 +36,11 @@ The Wcf services are completely isolated from the ASP.NET implementation and no 
 ```
 git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
 ```
-
-1. Open the solution in Visual Studio 2015 with relevant ASP.NET Core tools installed, or VS2017
-https://www.microsoft.com/net/core#windowsvs2015
-2. Build solution
-3. Open the NetCoreWebApp project, open context menu on references and restore packages
-3. Run the solution (Ctrl+F5/F5)
+1. Download the [.NET Core 2.0 SDK & Runtime](https://www.microsoft.com/net/core)
+2. Open the solution [Visual Studio 2017 update 3](https://www.visualstudio.com/downloads/)
+3. Build solution
+4. Open the NetCoreWebApp project, open context menu on references and restore packages
+5. Run the solution (Ctrl+F5/F5)
 
 ![Alt text](/ui.png?raw=true "Example UI")
 
@@ -58,6 +56,6 @@ https://www.microsoft.com/net/core#windowsvs2015
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
 
-##Troubleshooting
+## Troubleshooting
 1. The services don't start:
   * Solution Explorer -> Solution -> Properties -> Startup Project. Start WcfServices & NetCoreWebApp.
