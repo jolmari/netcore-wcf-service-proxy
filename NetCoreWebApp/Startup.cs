@@ -5,8 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NetCoreWebApp.Models;
-using WcfProxy;
-using WcfProxy.Interfaces;
+using WcfServiceProxy.Interfaces;
+using WcfServiceProxy;
 
 namespace NetCoreWebApp
 {

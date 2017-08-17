@@ -14,19 +14,13 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
-    <ProjectReference Include="..\WcfProxy\WcfProxy.csproj" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
   <ItemGroup>
 	<PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
 	<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.0" />
 	<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.0" PrivateAssets="All" />
 	<PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
-	<PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.4.1" />
+	<PackageReference Include="System.Private.ServiceModel" Version="4.4.0" />
   </ItemGroup>
   
   <ItemGroup>
@@ -35,6 +29,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\WcfProxy\WcfProxy.csproj" />
+    <ProjectReference Include="..\WcfServiceProxy\WcfServiceProxy.csproj" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetCoreWebApp.Models;
-using WcfProxy;
-using WcfProxy.Interfaces;
+using WcfServiceProxy.Interfaces;
 
 namespace NetCoreWebApp.Controllers
 {

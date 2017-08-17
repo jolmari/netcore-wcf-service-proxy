@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WcfProxy.Models;
+using WcfServiceProxy.Models;
 
 namespace NetCoreWebApp.Models
 {
