@@ -10,11 +10,11 @@ namespace WcfServiceProxy
 {
     public class PersonServiceWrapper : IPersonServiceWrapper
     {
-        private readonly WcfProxy<IPersonService> clientProxy;
+        private readonly IWcfProxy<IPersonService> clientProxy;
 
         public PersonServiceWrapper(string endpointUrl)
         {
-            clientProxy = new WcfProxy<IPersonService>(endpointUrl);
+            clientProxy = new WcfProxy<IPersonServiceChannel>(endpointUrl);
         }
 
         public IEnumerable<Person> GetPersons()
