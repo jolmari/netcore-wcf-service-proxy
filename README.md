@@ -1,4 +1,4 @@
-# Motivation
+# Why didn't I just use the existing connector?
 This small project is my solution to a problem I came across when trying to access multiple WCF-services
 from a new ASP.NET Core project and could not get the official WCF-extension to properly create
 the interfaces.
@@ -6,6 +6,14 @@ the interfaces.
 Most of the examples found by simple googling came up with simple connector implementations. These did not
 showcase the actual problem and were lacking in situations where multiple connections are needed. The aim here
 is to create a generic, yet simple, way to handle such a situation.
+
+# What else is this solution good for?
+The connected service reference is tied to one endpoint and to my knowledge the endpoint cannot be changed on the fly.
+Most web applications have multiple environments where they are run, so naturally the endpoints of WCF services will
+also change depending on the use case, ex. Production / Development implementations.
+
+This Wcf proxy approach makes it possible to configure the endpoint in a configuration file and then configure the
+client itself to connect to this url, instead of using multiple separate connected service references.
 
 # Problem description
 The first step in trying to enable WCF-services is to use the official Visual Studio extension found here:
