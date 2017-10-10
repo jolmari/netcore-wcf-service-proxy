@@ -56,11 +56,10 @@ git clone https://github.com/jolmari/netcore-wcf-service-proxy.git
 
 * Multiple WCF services
    * Simple examples of WCF services that are connected to by the proxy-class via message contracts.
-   * IoC using SimpleInjector and its Wcf Integration Extension
+   * IoC using built-in ASP.NET Core Dependency Injection.
 
 * WCF-proxy implementation
    * A class library project that wraps the actual service contracts with proxy implementations
-   * Simple authentication implementation (todo)
 
 * ASP.NET Core client that calls is used to demonstrate the use cases
 
