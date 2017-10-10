@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApp", "NetCoreWeb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WcfServiceProxy", "WcfServiceProxy\WcfServiceProxy.csproj", "{8A7BED96-E96A-4D04-BB27-25C12CCE072D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{8109D717-149E-486C-AE09-5D7FE3C8D642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfProxyUnitTests", "WcfProxyUnitTests\WcfProxyUnitTests.csproj", "{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{8A7BED96-E96A-4D04-BB27-25C12CCE072D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A7BED96-E96A-4D04-BB27-25C12CCE072D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A7BED96-E96A-4D04-BB27-25C12CCE072D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECCD5CD1-48AE-4970-A7CB-F3B0C886631E} = {8109D717-149E-486C-AE09-5D7FE3C8D642}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19E77A7D-3E74-4BED-9054-A310A4B451F6}

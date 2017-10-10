@@ -17,6 +17,11 @@ namespace WcfServiceProxy
             clientProxy = new WcfProxy<ICountryServiceChannel>(endpointUrl);
         }
 
+        public CountryServiceWrapper(IWcfProxy<ICountryServiceChannel> proxy)
+        {
+            clientProxy = proxy;
+        }
+
         public IEnumerable<Country> GetCountries()
         {
             var request = new GetCountriesRequest();
