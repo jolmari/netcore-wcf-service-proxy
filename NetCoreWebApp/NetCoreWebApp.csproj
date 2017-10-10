@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>NetCoreWebApp</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -20,7 +20,6 @@
 	<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.0" PrivateAssets="All" />
 	<PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
-	<PackageReference Include="System.Private.ServiceModel" Version="4.4.0" />
   </ItemGroup>
   
   <ItemGroup>

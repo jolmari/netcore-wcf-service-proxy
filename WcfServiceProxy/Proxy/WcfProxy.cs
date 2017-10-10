@@ -5,8 +5,8 @@ namespace WcfServiceProxy.Proxy
 {
     public class WcfProxy<T> : IWcfProxy<T> where T : class, ICommunicationObject
     {
-        private T _client;
-        private bool _disposed;
+        private T client;
+        private bool disposed;
         
         public WcfProxy(string endpointUrl)
         {
@@ -15,7 +15,7 @@ namespace WcfServiceProxy.Proxy
                 throw new ArgumentException("Endpoint cannot be empty.");
             }
 
-            _client = CreateChannel(new EndpointAddress(endpointUrl));
+            client = CreateChannel(new EndpointAddress(endpointUrl));
         }
 
         /// <summary>
@@ -38,16 +38,16 @@ namespace WcfServiceProxy.Proxy
         private void Dispose(bool disposing)
         {
             // Do not repeat dispose if called more than once.
-            if(!_disposed)
+            if(!disposed)
             {
                 var closedSuccessfully = false;
 
                 try
                 {
                     // Attempt to close client connection only if it is not in a faulted state.
-                    if(_client.State != CommunicationState.Faulted)
+                    if(client.State != CommunicationState.Faulted)
                     {
-                        _client.Close();
+                        client.Close();
                         closedSuccessfully = true;
                     }
                 }
@@ -56,12 +56,12 @@ namespace WcfServiceProxy.Proxy
                     // Force transition to closed if closing was unsuccessful.
                     if (!closedSuccessfully)
                     {
-                        _client.Abort();
+                        client.Abort();
                     }
                 }
 
-                _client = null;
-                _disposed = true;
+                client = null;
+                disposed = true;
             }
         }
 
@@ -74,12 +74,12 @@ namespace WcfServiceProxy.Proxy
 
         public void Execute(Action<T> function)
         {
-            function(_client);
+            function(client);
         }
 
         public TResult Execute<TResult>(Func<T, TResult> function)
         {
-            return function(_client);
+            return function(client);
         }
     }
 }
