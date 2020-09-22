@@ -8,7 +8,7 @@ namespace WcfServices
     {
         protected override ServiceHost CreateServiceHost(Type serviceType, Uri[] baseAddresses)
         {
-            return new SimpleInjectorServiceHost(Bootstrapper.Container,serviceType,baseAddresses);
+            return new SimpleInjectorServiceHost(Bootstrapper.Container, serviceType, baseAddresses);
         }
     }
 }

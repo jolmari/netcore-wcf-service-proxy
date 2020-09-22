@@ -6,21 +6,21 @@ namespace NetCoreWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICountryServiceWrapper countryServiceWrapper;
-        private readonly IPersonServiceWrapper personServiceWrapper;
+        private readonly ICountryServiceWrapper _countryServiceWrapper;
+        private readonly IPersonServiceWrapper _personServiceWrapper;
 
         public HomeController(ICountryServiceWrapper countryServiceWrapper, IPersonServiceWrapper personServiceWrapper)
         {
-            this.countryServiceWrapper = countryServiceWrapper;
-            this.personServiceWrapper = personServiceWrapper;
+            _countryServiceWrapper = countryServiceWrapper;
+            _personServiceWrapper = personServiceWrapper;
         }
 
         public IActionResult Index()
         {
             var result = new ServicePayload
             {
-                Countries = countryServiceWrapper.GetCountries(),
-                Persons = personServiceWrapper.GetPersons()
+                Countries = _countryServiceWrapper.GetCountries(),
+                Persons = _personServiceWrapper.GetPersons()
             };
 
             return View(result);

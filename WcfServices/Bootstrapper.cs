@@ -1,5 +1,6 @@
-﻿using SimpleInjector;
-using SimpleInjector.Integration.Wcf;
+﻿using System.Reflection;
+using SimpleInjector;
+using SimpleInjector.Lifestyles;
 using WcfServices.Interfaces;
 using WcfServices.Repositories;
 
@@ -12,14 +13,16 @@ namespace WcfServices
         static Bootstrapper()
         {
             var container = new Container();
-            container.Options.DefaultScopedLifestyle = new WcfOperationLifestyle();
+            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+
+            // Register WCF services.
+            container.RegisterWcfServices(Assembly.GetExecutingAssembly());
 
             container.Register<ICountryRepository, CountryRepository>();
             container.Register<IPersonRepository, PersonRepository>();
 
             container.Verify();
             Container = container;
-
         }
     }
 }

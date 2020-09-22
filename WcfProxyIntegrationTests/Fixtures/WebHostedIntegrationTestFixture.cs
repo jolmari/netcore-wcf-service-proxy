@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using NetCoreWebApp;
 
 namespace WcfProxyIntegrationTests.Fixtures
@@ -19,7 +20,8 @@ namespace WcfProxyIntegrationTests.Fixtures
 
             _server = new TestServer(new WebHostBuilder()
                 .UseContentRoot(contentRoot)
-                .UseEnvironment("production")
+                .UseEnvironment("development")
+                .UseConfiguration(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build())
                 .UseStartup<Startup>());
             Client = _server.CreateClient();
         }
